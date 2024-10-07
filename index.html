@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel Slideshow</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  body {
+    background-color: #fff; /* Latar belakang putih */
+    color: #333; /* Warna teks utama */
+  }
+
+  nav {
+    background-color: #ff69b4; /* Warna pink untuk navbar */
+  }
+
+  nav .navbar-brand, nav .nav-link {
+    color: #fff; /* Warna teks putih di navbar */
+  }
+
+  nav .nav-link:hover {
+    color: #ffeb3b; /* Warna teks kuning saat hover */
+  }
+
+  .produk-img-container {
+    margin: 10px;
+  }
+
+  .produk-img {
+    border-radius: 15px;
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    border: 2px solid #ff69b4; /* Border pink untuk gambar produk */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+
+  .produk-container {
+    position: relative;
+  }
+
+  .btn-semuaproduk {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .testimoni-container {
+    max-width: 500px; /* Ukuran maksimal untuk carousel testimoni */
+    margin: 0 auto;
+  }
+
+  .testimoni-img {
+    width: 80px; /* Ukuran gambar lebih kecil */
+    height: 80px; /* Memastikan gambar berbentuk kotak */
+    object-fit: cover; /* Mengatur gambar agar tetap terjaga proporsinya */
+    margin: 0 auto; /* Memposisikan gambar di tengah */
+  }
+
+  .carousel-item {
+    text-align: center;
+    height: 200px; /* Sesuaikan tinggi yang diinginkan */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+  }
+
+  .testimoni-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ff69b4; /* Warna pink untuk teks testimoni */
+  }
+
+  footer {
+    background-color: #ff69b4; /* Warna pink untuk footer */
+    color: #fff; /* Teks footer putih */
+    padding: 20px; /* Jarak dalam footer */
+    text-align: center; /* Rata tengah untuk isi footer */
+    margin-top: 20px; /* Jarak atas footer dari konten sebelumnya */
+  }
+
+  footer a {
+    color: #fff; /* Tautan di footer berwarna putih */
+  }
+
+  footer a:hover {
+    color: #ffeb3b; /* Warna kuning saat hover pada tautan */
+  }
+
+  h2 {
+    color: #ff69b4; /* Judul warna pink */
+  }
+
+  p, ul {
+    color: #555; /* Warna teks untuk paragraf dan list */
+  }
+
+  .btn-primary {
+    background-color: #ff69b4; /* Warna pink untuk tombol */
+    border: none; /* Menghilangkan border */
+  }
+
+  .btn-primary:hover {
+    background-color: #ff1493; /* Warna pink gelap saat hover */
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" style="background-color: #ff69b4;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><strong>Septi Ms Glow</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produk.html">Produk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="kontak.html">Hubungi Kami</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/prd1.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="img/prd2.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="img/prd3.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+    <div class="carousel-item">
+      <img src="img/prd4.jpg" class="d-block w-100" alt="Slide 4">
+    </div>
+    <div class="carousel-item">
+      <img src="img/prd5.jpg" class="d-block w-100" alt="Slide 5">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Teks Iklan -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Mengapa Memilih Ms Glow?</h2>
+  <p class="text-center">Ms Glow adalah solusi terbaik untuk kulit cerah dan sehat! Dengan bahan-bahan berkualitas dan teknologi terkini, setiap produk kami dirancang untuk memberikan hasil maksimal dalam perawatan kulit. Nikmati perubahan nyata dengan kulit yang lebih cerah, halus, dan bercahaya. Dapatkan kepercayaan diri Anda kembali bersama Ms Glow!</p>
+  <ul>
+    <li>Bahan Alami yang Aman untuk Semua Jenis Kulit</li>
+    <li>Teruji Klinis dengan Hasil yang Cepat dan Efektif</li>
+    <li>Memberikan Perlindungan dari Sinar UV dan Radikal Bebas</li>
+    <li>Melembapkan Kulit dan Mengurangi Noda Hitam</li>
+  </ul>
+  <div class="text-center">
+    <a href="#" class="btn btn-primary">Dapatkan Sekarang!</a>
+  </div>
+</div>
+
+<!-- Produk Terbaru -->
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Produk Terbaru</h2>
+  <div class="d-flex justify-content-between produk-container">
+    <div class="col-md-4 produk-img-container">
+      <img src="img/prd6.jpg" class="img-fluid produk-img" alt="Produk 1">
+      <p class="text-center">Produk 1</p>
+    </div>
+    <div class="col-md-4 produk-img-container">
+      <img src="img/prd7.jpg" class="img-fluid produk-img" alt="Produk 2">
+      <p class="text-center">Produk 2</p>
+    </div>
+    <div class="col-md-4 produk-img-container">
+      <img src="img/prd8.jpg" class="img-fluid produk-img" alt="Produk 3">
+      <p class="text-center">Produk 3</p>
+    </div>
+    <a href="#" class="btn btn-primary btn-semuaproduk">Semua Produk</a>
+  </div>
+</div>
+
+<!-- Testimoni Section -->
+<div class="container mt-5 testimoni-container">
+  <h2 class="text-center mb-4">Testimoni</h2>
+  <div id="carouselTestimoni" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <!-- Testimoni 1 -->
+      <div class="carousel-item active">
+        <img src="img/tst1.jpg" class="testimoni-img" alt="Testimoni 1">
+        <p class="testimoni-text">"Produk ini sangat bagus! Kulit saya menjadi lebih cerah."</p>
+      </div>
+      <!-- Testimoni 2 -->
+      <div class="carousel-item">
+        <img src="img/tst2.jpg" class="testimoni-img" alt="Testimoni 2">
+        <p class="testimoni-text">"Hasilnya terlihat dalam waktu singkat, saya sangat puas!"</p>
+      </div>
+      <!-- Testimoni 3 -->
+      <div class="carousel-item">
+        <img src="img/tst3.jpg" class="testimoni-img" alt="Testimoni 3">
+        <p class="testimoni-text">"Pasti akan beli lagi, produk ini sangat efektif."</p>
+      </div>
+      <!-- Testimoni 4 -->
+      <div class="carousel-item">
+        <img src="img/tst4.jpg" class="testimoni-img" alt="Testimoni 4">
+        <p class="testimoni-text">"Pelayanan sangat baik, produk sesuai dengan deskripsi."</p>
+      </div>
+      <!-- Testimoni 5 -->
+      <div class="carousel-item">
+        <img src="img/tst5.jpg" class="testimoni-img" alt="Testimoni 5">
+        <p class="testimoni-text">"Pengiriman cepat, produk dikemas dengan rapi."</p>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimoni" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimoni" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Septi Ms Glow. All rights reserved.</p>
+  <a href="#" class="text-decoration-none">Privacy Policy</a> | 
+  <a href="#" class="text-decoration-none">Terms of Service</a>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
